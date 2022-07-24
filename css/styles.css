@@ -1,0 +1,492 @@
+html {
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/images/cabaña-panoramica.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    margin: 1.5rem 2rem 0rem 2rem;
+    padding: 1rem;
+    background-color: rgba(169, 169, 169, 0.541);
+    color: #ff7700;
+    border-radius: 20px;
+}
+
+
+.header-isologo {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+    justify-content: center;
+    width: 30vw;
+
+}
+
+.header-isologo:hover {
+    transform: rotateY(360deg) scale(1.25);
+    transition: 700ms;
+    color: snow;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 69%;
+    font-family: 'Righteous', cursive;
+}
+
+.header h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.header h1:hover {
+    color: snow;
+    transform: scale(1.2);
+    transition: 1s;
+    text-shadow: 5px 5px 3px #333333;
+
+}
+
+
+
+
+/* MAIN_CONTAINER */
+
+main {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-container {
+    display: grid;
+    width: 96%;
+    grid-gap: 2rem;
+    margin: .5rem;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-rows: minmax(200px, 1fr);
+    grid-template-areas:
+        "monoambiente description1"
+        "cabmediana description2"
+        "cabgrande description3";
+}
+
+.box1 img {
+    grid-area: monoambiente;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+.box2 {
+    grid-area: description1;
+    background-color: rgba(169, 169, 169, 0.541);
+    border-radius: 20px;
+}
+
+.box2 h3 {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif, bold;
+    color: rgb(255, 255, 255);
+}
+
+.box2 p {
+    margin: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif, bold;
+    color: rgb(255, 255, 255);
+}
+
+.box3 img {
+    grid-area: cabmediana;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.box4 {
+    grid-area: description2;
+    background-color: rgba(169, 169, 169, 0.541);
+    border-radius: 20px;
+}
+
+.box4 h3 {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif, bold;
+    color: rgb(255, 255, 255);
+}
+
+.box4 p {
+    margin: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif, bold;
+    color: rgb(255, 255, 255);
+}
+
+.box5 img {
+    grid-area: cabgrande;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.box6 {
+    grid-area: description3;
+    background-color: rgba(169, 169, 169, 0.541);
+    border-radius: 20px;
+}
+
+.box6 h3 {
+    margin: 10px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif, bold;
+    color: rgb(255, 255, 255);
+}
+
+.box6 p {
+    margin: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif, bold;
+    color: rgb(255, 255, 255);
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+.box2:hover {
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+.box4:hover {
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+.box6:hover {
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+/* Menu NAV https://www.youtube.com/watch?v=3mdQuS8VHKg */
+
+
+.nav.menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.nav.menu ul {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 98%;
+    font-family: 'Righteous';
+    font-size: 3rem;
+    color: #ffffff;
+    padding: 1.5rem;
+    margin: auto;
+
+
+}
+
+.menu>li {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: white;
+    background-color: #202020;
+
+}
+
+
+.menu li a:hover {
+    color: #ce7d35;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.submenu {
+    position: absolute;
+    width: 120%;
+    background-color: #202020;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1.5s;
+
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+
+.h2-container {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Righteous';
+    color: darkred;
+
+}
+
+.section-container {
+    text-align: justify;
+
+    columns: 3;
+    gap: 2rem;
+    column-rule: 1px solid tomato;
+}
+
+.section-container figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* CONTACT.CSS*/
+.body-contact {
+
+    background-image: url(../images/tunel-potrerillos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-contact {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+}
+
+.nav-menu-contact {
+    box-sizing: border-box;
+    margin: 24px 32px 0 32px;
+    background-color: rgba(128, 128, 128, 0.233);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin: 0 32px 0 32px;
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+.form-contact label:hover {
+    transform: scale(1.9);
+    transition: 700ms;
+    text-shadow: 5px 5px 2px #333333;
+    font-style: bold;
+
+}
+
+.form-contact legend:hover {
+    transform: scale(1.9);
+    transition: 700ms;
+    text-shadow: 5px 5px 2px #333333;
+    font-style: bold;
+
+}
+
+.contact-styles {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+
+.footer-contact {
+    margin: 0 32px 24px 32px;
+    background-color: rgba(128, 128, 128, 0.233);
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 10px solid rgba(255, 255, 255, 0);
+    font-size: 1rem;
+}
+
+.footer-contact h3:hover {
+    transform: scale(1.3);
+    transition: 700ms;
+    text-shadow: 5px 5px 2px #333333;
+    color: rgb(209, 209, 209);
+    font-style: bold;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 576px) {
+    nav {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .menu {
+        justify-content: space-between;
+        font-size: 2rem;
+        color: #ffffff;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .menu>li {
+        font-size: 12px;
+    }
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(200px, 1fr);
+        grid-template-areas:
+            "monoambiente"
+            "description1"
+            "cabmediana"
+            "description2"
+            "cabgrande"
+            "description3";
+    }
+
+    .menu>li>a {
+        background-color: #202020e5;
+    }
+
+    .box6 h3 {
+        font-size: 1.5rem;
+    }
+
+    .box4 h3 {
+        font-size: 1.5rem;
+    }
+
+    .box2 h3 {
+        font-size: 1.5rem;
+    }
+    .nav-menu-contact {
+        box-sizing: border-box;
+        margin: 0;
+        background-color: rgba(245, 222, 179, 0);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .form-contact {
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .footer-contact {
+        background-color: rgba(128, 128, 128, 0);
+        
+    }
+    .box2 {
+        background-color: #3333338f;
+    }
+    .box4 {
+        background-color: #3333338f;
+    }
+    .box6{
+        background-color: #3333338f;
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px){
+    nav {
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu {
+        justify-content: space-between;
+        font-size: 2.3rem;
+        color: #ffffff;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .menu>li {
+        font-size: 17px;
+    }
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(200px, 1fr);
+        grid-template-areas:
+            "monoambiente"
+            "description1"
+            "cabmediana"
+            "description2"
+            "cabgrande"
+            "description3";
+        
+
+    }
+    .box2 {
+        background-color: #3333338f;
+    }
+    .box4 {
+        background-color: #3333338f;
+    }
+    .box6{
+        background-color: #3333338f;
+    }
+}
